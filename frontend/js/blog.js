@@ -1,5 +1,3 @@
-// Blog list, dashboard and create form. Data lives in localStorage for now.
-// Module 3: replace getBlogs/saveBlog with API calls to /api/blogs.
 const sampleBlogs = [
   {
     id: 1,
