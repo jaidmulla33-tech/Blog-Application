@@ -4,7 +4,6 @@ const { read, write } = require("../utils/store");
 
 const router = express.Router();
 
-// GET /api/blogs  (optional ?authorId= to get one user's blogs)
 router.get("/", (req, res) => {
   let blogs = read("blogs");
   if (req.query.authorId)
@@ -12,7 +11,7 @@ router.get("/", (req, res) => {
   res.json(blogs.sort((a, b) => b.createdAt.localeCompare(a.createdAt)));
 });
 
-// POST /api/blogs  (Module 5 will take the author from the JWT instead of the body)
+
 router.post("/", (req, res) => {
   const { title, category, content, authorId } = req.body;
   if (!title || !content || !authorId)
