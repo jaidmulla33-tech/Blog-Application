@@ -7,7 +7,7 @@ const router = express.Router();
 const emailOk = (e) => /^\S+@\S+\.\S+$/.test(e);
 const publicUser = (u) => ({ id: u.id, name: u.name, email: u.email });
 
-// POST /api/auth/register
+
 router.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
   if (!name || !email || !password)
@@ -38,7 +38,7 @@ router.post("/register", async (req, res) => {
   res.status(201).json({ message: "Account created.", user: publicUser(user) });
 });
 
-// POST /api/auth/login  (Module 5 will also return a JWT here)
+
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
   if (!email || !password)
