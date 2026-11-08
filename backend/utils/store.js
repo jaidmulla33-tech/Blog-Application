@@ -1,4 +1,4 @@
-// Temporary JSON-file storage. Module 3 replaces this file with MongoDB/Supabase.
+
 const fs = require("fs");
 const path = require("path");
 
